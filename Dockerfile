@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-RUN apk update && \
-    apk add --no-cache jq python3 && \
+RUN apk update && apk upgrade && \
+    apk add --no-cache perl bash jq python3 && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
