@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && apk upgrade && \
-    apk add --no-cache perl bash jq python3 && \
+    apk add --no-cache perl bash jq python3 nodejs nodejs-npm && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
